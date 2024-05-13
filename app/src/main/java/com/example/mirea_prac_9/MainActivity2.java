@@ -65,6 +65,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void delete(View view) {
         String fileName = NameFile.getText().toString();
+        File dir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS), "mirea");
+        file = new File(dir, fileName);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Удаление")
                 .setMessage("Вы уверены, что вы хотите удалить файл?")
